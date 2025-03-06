@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//this is the player controller script for the Magno Sheep
 public class SphereController : MonoBehaviour
 {
     public MagnetController mg;
