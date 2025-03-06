@@ -35,6 +35,11 @@ public class SphereController : MonoBehaviour
 
     private void Update()
     {
+        Inputs();
+    }
+
+    void Inputs()
+    {
         // Get player input
         moveX = Input.GetAxisRaw(horizontalInputAxis);
         moveZ = Input.GetAxisRaw(verticalInputAxis);
@@ -49,6 +54,7 @@ public class SphereController : MonoBehaviour
             mg.ImpulseBlast(mg.currentCharge);
         }
     }
+
 
     private void FixedUpdate()
     {
@@ -74,26 +80,6 @@ public class SphereController : MonoBehaviour
         }
     }
 
-
-
-
-    void GridMovement()
-    {
-        //if (timeUntilMove <= 0)
-        //{
-        //    Debug.Log("moveX: " + moveX + "moveZ: " + moveZ);
-        //    Vector3 positionChange = new Vector3(moveX * moveDistance, 0, moveZ * moveDistance);
-        //    targetPosition += positionChange;
-
-        //    if (positionChange.magnitude > 0)
-        //    {
-        //        timeUntilMove = moveCooldown;
-        //    }
-        //}
-        //timeUntilMove -= Time.fixedDeltaTime;
-
-        //LerpToPosition();
-    }
 
     void LerpToPosition()
     {
